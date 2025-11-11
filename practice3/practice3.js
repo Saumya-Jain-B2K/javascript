@@ -27,3 +27,21 @@ let isEven = (num) => {
 };
 
 console.log(isEven(10));
+
+// destructure arrays
+
+let names = ["Saumya", "ashish", "lakhan", "Aman"];
+let [winner, runnerup] = names;
+console.log(winner, runnerup);
+
+// destructure objects
+const student = {
+    name: "Kanwar",
+    age: 45,
+    class: "Hindu",
+    marks: [23, 56, 45, 78, 99],
+    username: "kanwar@1",
+    password: "asckd"
+};
+
+let { username: userId, password: secret} = student;
