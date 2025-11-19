@@ -1,0 +1,176 @@
+/* *{
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn{
+    height: 170px;
+    width: 170px;
+    border: 5px solid black;
+    border-radius: 15px;
+    margin: 2.5rem;
+    margin-top: 1rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.red{
+    background-color: #d95980;
+}
+
+.yellow{
+    background-color: #f99b45;
+}
+
+.green{
+    background-color: #63aac0;
+}
+
+.purple{
+    background-color: #819ff9;
+}
+
+.flash{
+    background-color: white;
+} */
+
+/* Responsive Simon Game CSS — always 2 boxes per row on small screens */
+
+/* reset & box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* page layout */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  padding: 1rem;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* headings */
+h1 {
+  font-size: clamp(1.25rem, 3.4vw, 2rem);
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+h2 {
+  font-size: clamp(1rem, 2.8vw, 1.25rem);
+  margin-bottom: 0.25rem;
+}
+h3 {
+  font-size: clamp(.9rem, 2.2vw, 1rem);
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+/* container */
+.container {
+  display: flex;
+  flex-direction: column; /* lines stack vertically */
+  width: min(100%, 760px);
+  gap: 0; /* lines themselves control spacing */
+  align-items: center;
+  padding: 0.25rem;
+}
+
+/* each line holds two buttons (keeps them on same row) */
+.line1,
+.line2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+/* buttons: make them take about half of the row */
+.btn {
+  /* ensure two per line: ~50% each minus gaps */
+  flex: 0 0 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
+  min-width: 100px;               /* prevents getting too small */
+  aspect-ratio: 1 / 1;            /* keeps square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  font-weight: 600;
+  border: 5px solid black;
+  border-radius: 15px;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease;
+  margin: 0;
+}
+
+/* colors (unchanged) */
+.red{ background-color: #d95980; }
+.yellow{ background-color: #f99b45; }
+.green{ background-color: #63aac0; }
+.purple{ background-color: #819ff9; }
+
+/* flash effect */
+.flash {
+  background-color: white !important;
+  filter: brightness(1.35);
+  transform: scale(1.03);
+}
+
+/* tweak spacing on small screens */
+@media (max-width: 460px) {
+  .line1, .line2 { gap: 0.4rem; }
+  .btn {
+    min-width: 96px;
+    font-size: clamp(.95rem, 3.2vw, 1.1rem);
+  }
+}
+
+/* medium screens keep two per row but allow larger buttons */
+@media (min-width: 600px) {
+  .btn {
+    flex: 0 0 calc(50% - 1.25rem);
+    max-width: calc(50% - 1.25rem);
+    min-width: 120px;
+  }
+}
+
+/* large screens: restore the original exact 170px boxes and larger spacing */
+@media (min-width: 900px) {
+  .container { gap: 1rem; }
+  .line1, .line2 { gap: 1.25rem; }
+  .btn {
+    flex: 0 0 170px;
+    max-width: 170px;
+    min-width: 170px;
+    margin: 1.25rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* accessibility: keyboard focus */
+.btn:focus {
+  outline: 3px solid rgba(0,0,0,0.12);
+  outline-offset: 4px;
+}
