@@ -23,6 +23,17 @@ document.addEventListener('keypress', function(){
     }
 })
 
+document.addEventListener('touchstart', startGame); // for mobile
+
+function startGame() {
+    if (start === false) {
+        console.log("game started");
+        start = true;
+
+        levelUp();
+    }
+}
+
 function btnFlash(btn) {
     btn.classList.add('flash');
 
