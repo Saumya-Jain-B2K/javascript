@@ -7,5 +7,6 @@ let obj1 = {
     name: "Saumya",
     age: 20
 };
+//how to use stringify for json
 let json = JSON.stringify(obj1);
 console.log(json);
