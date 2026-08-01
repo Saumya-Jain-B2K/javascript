@@ -56,8 +56,8 @@
 // console.log(typeof(naa));
 
 //airthmentic binary operators
-let a = 10;
-let b = 20;
+// let a = 10;
+// let b = 20;
 // //addition
 // console.log(a+b);
 // //substraction
@@ -92,10 +92,235 @@ let b = 20;
 // console.log("5" != 5);
 
 //using ternary operator
-let age = 20;
-console.log(age > 18 ? "Eligible to drive" : "Not Eligible to drive");
+// let age = 20;
+// console.log(age > 18 ? "Eligible to drive" : "Not Eligible to drive");
 
+//logical operators [&&, ||, !]
 
+//bitwise operators [&, |, ~, <<, >>, ^]
+
+//for loop
+// for(let i = 1; i<=10; i++){
+//     console.log(i);
+// }
+
+//reverse counting
+// for(let i = 10; i>=1; i--){
+//     console.log(i);
+// }
+
+//string
+// let fName = "Jhon";
+// let lName = "Doe";
+// console.log(fName);
+// console.log(fName + " " + lName);
+// console.log(fName+2);
+
+// //using template literals
+// console.log(`Hello! My name is: ${fName} ${lName}`)
+
+//using string methods
+// console.log(fName.length);
+// console.log(fName.toUpperCase());
+// console.log(fName.toLowerCase());
+// console.log(fName.substring(1,2));
+
+// let sen = "Hello everyone myself Jhon Doe";
+// console.log(sen.split(" "));
+// //in this way we can add intverted commas in writing the string
+// let sen1 = "Hello everyone myself \"Jhon Doe\"";
+// console.log(sen1);
+
+//creating a function
+// function add(a, b){
+//     console.log(a+b);
+// }
+
+// add(2, 4);
+// for(let i =1; i<5; i++){
+//     add(i, i);
+// }
+
+// function tableOfNum(num){
+//     for(let i = 1; i <= 10; i++){
+//         // console.log("Table of " + num + " is: ");
+//         console.log(`${num}` + "*" + `${i}` + "=" + `${num*i}`);
+//     }
+// }
+
+// tableOfNum(16);
+
+//using return function
+// function mult(a, b){
+//     return a*b;
+// }
+
+// let ans = mult(2, 3);
+// console.log("Multiplication: " + ans);
+
+//function as a variable
+// const add = function(a, b){
+//     return a+b;
+// }
+
+// console.log(add(2,3));
+
+// const squareOfNum = function(num){
+//     return num*num;
+// }
+
+// console.log(squareOfNum(4));
+
+//arrow function
+// const sq = (num) => {
+//     return num**2;
+// }
+
+// console.log(sq(8));
+
+//object creation
+// let obj = {
+//     a : "Hello",
+//     age : 10,
+// };
+
+// console.log(obj.a);
+
+// //array creation
+// let arr = [1, 2, 3, 4];
+// console.log(arr[3]);
+// console.log(typeof(arr))
+// console.log(arr.length);
+
+// //array constructor
+// let brr = new Array(1, 2, 3);
+// console.log(brr);
+// console.log(brr.length)
+
+// //push, pop. shift, unshift
+// brr.push(10);
+// console.log(brr)
+// brr.pop();
+// console.log(brr)
+// brr.shift();
+// console.log(brr);
+// brr.unshift(1);
+// console.log(brr);
+// brr.push(4, 5, 6);
+// console.log(brr);
+
+// //slice it runs from start index to n-1 index
+// console.log(brr.slice(2,4));
+// console.log(brr)
+// //splice method
+// console.log(brr.splice(1, 0, 10));
+// console.log(brr)
+
+//using map function
+// let arr = [10, 20, 30, 34
+//     , 79, 65, 90, 13
+// ];
+// let newArr = arr.map((num) => {
+//     return num*num;
+// })
+// console.log(newArr);
+
+// let arr1 = arr.map((num) => {
+//     console.log(num);
+// })
+// console.log(arr1);
+
+// let ans = arr.filter((num) => {
+//     if(num%2 === 0){
+//         return true;
+//     }
+//     else {
+//         return false;
+//     }
+// })
+// console.log(ans);
+
+// let srr = [1, "Hello", 2, "yoo", "lovely", 3, 6, 7];
+// let ans1 = srr.filter((num) => {
+//     if(typeof(num) === "string"){
+//         return num;
+//     }
+// })
+// console.log(ans1);
+
+//using reduce function
+// let arr = [10, 20, 30, 40, 50];
+// let ans = arr.reduce((acc, curr) => {
+//     return acc + curr;
+// }, 0);
+// console.log(ans);
+
+//using sort method
+//ascending order
+// let arr = [3, 2, 8, 3, 6, 90, 45, 234];
+// let ans = arr.sort((a, b) => a-b);
+// console.log(ans);
+
+//indexof
+// console.log(arr.indexOf(2));
+
+//descending order
+// let arr1 = [3, 2, 8, 3, 6, 90, 45, 234];
+// let ans1 = arr.sort((a, b) => b-a);
+// console.log(ans1);
+
+//find method
+// console.log(arr);
+// let ans = arr.find((num) => {
+//     return num > 5;
+// })
+// console.log(ans);
+
+//for each loop
+// let arr = [1, 2, 3, 4, 5];
+// let ans = arr.forEach((num, ind) => {
+//     console.log(`Index: ${ind} and Value: ${num}`);
+// })
+// console.log(ans);
+
+//for in loop
+let obj = {
+    name: 'Jhon',
+    age: 19,
+    city: 'New York',
+    greet: function() {
+        console.log("Hello");
+    },
+};
+
+for(let key in obj){
+    console.log(key + " " + obj[key]);
+}
+
+//for of loop
+let arr = [1, 2, 3, 4, 5];
+for(let val of arr){
+    console.log(val);
+}
+
+let str = "Hello";
+for(let val of str){
+    console.log(val);
+}
+
+//function for array
+function sum(arr){
+    let len = arr.length;
+    let sum = 0;
+    for(let i = 0; i<len; i++){
+        sum += arr[i];
+    }
+    // console.log(sum);
+    return sum;
+}
+
+let ans = sum(arr);
+console.log(ans);
 
 
 
