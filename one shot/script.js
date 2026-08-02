@@ -284,43 +284,106 @@
 // console.log(ans);
 
 //for in loop
-let obj = {
-    name: 'Jhon',
-    age: 19,
-    city: 'New York',
-    greet: function() {
-        console.log("Hello");
-    },
-};
+// let obj = {
+//     name: 'Jhon',
+//     age: 19,
+//     city: 'New York',
+//     greet: function() {
+//         console.log("Hello");
+//     },
+// };
 
-for(let key in obj){
-    console.log(key + " " + obj[key]);
+// for(let key in obj){
+//     console.log(key + " " + obj[key]);
+// }
+
+// //for of loop
+// let arr = [1, 2, 3, 4, 5];
+// for(let val of arr){
+//     console.log(val);
+// }
+
+// let str = "Hello";
+// for(let val of str){
+//     console.log(val);
+// }
+
+// //function for array
+// function sum(arr){
+//     let len = arr.length;
+//     let sum = 0;
+//     for(let i = 0; i<len; i++){
+//         sum += arr[i];
+//     }
+//     // console.log(sum);
+//     return sum;
+// }
+
+// let ans = sum(arr);
+// console.log(ans);
+
+//another function
+function greetMe(greet, fullName){
+    console.log("Hello my name is: ", fullName);
+    greet();
 }
 
-//for of loop
-let arr = [1, 2, 3, 4, 5];
-for(let val of arr){
-    console.log(val);
-}
+greetMe(greet, "Jhon Doe");
 
-let str = "Hello";
-for(let val of str){
-    console.log(val);
-}
+//function can be assigned to variables
+// let greet = function() {
+//     console.log("Hello! greetings from the editor");
+// }
+// greet();
 
-//function for array
-function sum(arr){
-    let len = arr.length;
-    let sum = 0;
-    for(let i = 0; i<len; i++){
-        sum += arr[i];
-    }
-    // console.log(sum);
-    return sum;
-}
+// function greet() {
+//     console.log("Hello! greetings from the editor");
+// }
 
-let ans = sum(arr);
-console.log(ans);
+// //function use as a return function
+// function square(number) {
+//     return function (number) {
+//         return number*number;
+//     }
+// }
+
+// let ans = square();
+// let fAns = ans(10);
+// console.log(fAns);
+
+// //function using in array element
+// let arr = [
+//     function (a,b) {
+//         return a+b;
+//     },
+//     function (a,b) {
+//         return a-b;
+//     },
+//     function (a,b) {
+//         return a*b;
+//     },
+//     function (a,b) {
+//         return a/b;
+//     }
+
+// ];
+
+// let a1 = arr[0];
+// let ans1 = a1(2,3);
+// console.log(ans1);
+
+// //using 2nd index element from the array
+// let a2 = arr[1];
+// let ans2 = a2(2,3);
+// console.log(ans2);
+// let a3 = arr[2];
+// let ans3 = a3(2,3);
+// console.log(ans3);
+// let a4 = arr[3];
+// let ans4 = a4(2,3);
+// console.log(ans4);
+
+
 
 
 
