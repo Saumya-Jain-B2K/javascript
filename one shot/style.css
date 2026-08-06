@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(2, 28, 50);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: rgb(0, 46, 86);
+    padding: 15px;
+    border-radius: 20px;
+    width: 50%;
+    max-width: 500px;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: start;
+}
+
+.user-input-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-name{
+    width: 80%;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+#search-button{
+    width: 17%;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid rgb(15, 112, 54);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    columns: white;
+    font-weight: 700;
+    background: conic-gradient(rgb(15, 112, 54) var(--progress-degree, 0%), #053616 0%);
+
+}
+
+.circle span{
+    position: relative;
+    z-index: 2;
+}
+
+.progress{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
